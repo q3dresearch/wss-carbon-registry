@@ -46,6 +46,15 @@ notes: >-
   refuses to rewrite if it has; per page, must_contain still rejects an error or
   empty body.
 
+  PARSED BY parsers/gsproject_v1.py, keyed on sustaincert_id -- the identifier
+  that appears in sustaincert_url and is therefore the one anything outside
+  this registry can join on. `listed` is emitted once per project per capture
+  and its ABSENCE later is the finding, since status carries no terminal value.
+  `updated_at` is the registry's own edit stamp, present on all 4,207 projects
+  with 3,460 distinct values, and is what makes a silent in-place edit datable.
+  First parse of the baseline: 82,326 observations over 4,207 projects,
+  387,460,153 estimated credits a year in total.
+
   TRAP IN THE DATA: created_at puts 1,774 of 4,207 projects in 2019 - 42% in one
   year against 321 the next. That is a platform migration timestamp, not a founding
   date. Anything keyed on created_at will read a migration as a boom.
