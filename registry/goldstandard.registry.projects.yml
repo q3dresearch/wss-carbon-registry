@@ -23,12 +23,19 @@ notes: >-
   type, size, estimated annual credits, crediting period, and a SustainCert id.
   4,207 projects over 169 pages on 2026-09-22.
 
-  NOBODY ELSE HOLDS THIS. public-api.goldstandard.org/projects has ZERO Internet
-  Archive mementos. registry.goldstandard.org/projects has 68 mementos spanning
-  2021-2026, and four sampled captures are ~2 KB client-rendered shells with 59
-  characters of visible text and not one project id in them. The UI is a JS app
-  and the Archive photographed an empty frame 68 times. So the coverage check
-  passes on measurement, not assumption.
+  NOBODY ELSE HOLDS THIS, AND HERE IS THE EXACT NUMBER. The list endpoint
+  public-api.goldstandard.org/projects has ZERO Internet Archive mementos.
+  That sentence is narrow on purpose: the Archive DOES hold 35 individual
+  project records under that host (144 captures, 2023-2026, all HTTP 200), so
+  "zero mementos" is true of the list and false of the host. 35 of 4,207 is
+  0.8% of the register, which is why the claim survives being stated precisely
+  rather than loosely -- re-measured 2026-09-23 once the Archive came back up.
+
+  registry.goldstandard.org/projects has 68 mementos spanning 2021-2026, and
+  four sampled captures are ~2 KB client-rendered shells with 59 characters of
+  visible text and not one project id in them. The UI is a JS app and the
+  Archive photographed an empty frame 68 times. So the coverage check passes on
+  measurement, not assumption.
 
   THE PAGE COUNT IS NOT KNOWABLE AHEAD. The API is a bare JSON array, 25 per page,
   with no total in the response, so the capture is "page until an empty array" -
