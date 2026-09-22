@@ -4,11 +4,11 @@
 # Weekly is the floor: a daily capture has never changed a decision this fleet
 # makes, so the template does not ship one. For a monthly source, copy this file
 # and change three things: the workflow `name`, the cron, and `CADENCE`.
-name: capture-weekly
+name: capture-monthly
 
 on:
   schedule:
-    - cron: "10 22 * * 1" # Monday, off the hour — GitHub's scheduler is contended at :00
+    - cron: "10 22 8 * *" # 8th, off the hour — GitHub's scheduler is contended at :00
   workflow_dispatch:
 
 permissions:
@@ -24,7 +24,11 @@ env:
   # in every shard. No setup required: GitHub supplies owner and repo, and
   # a fork sends its own. Set a WSS_CONTACT secret only to override.
   WSS_CONTACT: ${{ secrets.WSS_CONTACT || format('{0} +https://github.com/{1}', github.repository_owner, github.repository) }}
-  CADENCE: weekly
+  # MUST match the registry's `cadence:`. It said weekly against a monthly
+  # source, so `wss plan` returned [] and the capture job was skipped on every
+  # run while the workflow stayed green -- a repo that captures nothing and
+  # reports success.
+  CADENCE: monthly
   SHARDS: "20" # matrix cap is 256 jobs/run — aim for ~20 jobs of ~50 sources
   ENGINE_SPEC: "wss[object] @ git+https://github.com/${{ github.repository_owner }}/wss-engine.git@v0.6.54"
 
@@ -77,6 +81,14 @@ jobs:
           python-version: "3.12"
       - name: Install engine
         run: pip install "$ENGINE_SPEC"
+      # The page count is not knowable ahead: the API is a bare JSON array with
+      # no total, so the endpoint list is materialised here and committed with
+      # the capture. A register that has lost >40% of its projects aborts the
+      # job rather than capturing a suspect state. See examples/refresh_endpoints.py.
+      - name: Materialise the endpoint list
+        run: python examples/refresh_endpoints.py
+      - name: Re-validate the rewritten registry
+        run: wss validate
       - name: Capture shard ${{ matrix.shard }}
         env:
           # Harmless when every source declares `storage: git` -- the variables
@@ -94,7 +106,7 @@ jobs:
       - name: Pack shard delta (new files only)
         if: always()
         run: |
-          git add -A raw manifest 2>/dev/null || true
+          git add -A raw manifest registry 2>/dev/null || true
           { git diff --cached --name-only; find quarantine -type f 2>/dev/null || true; } > /tmp/delta-files.txt
           if [ -s /tmp/delta-files.txt ]; then
             tar -czf shard-delta.tgz --files-from=/tmp/delta-files.txt
@@ -142,7 +154,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A raw manifest state
+          git add -A raw manifest registry state
           if git diff --cached --quiet; then
             echo "nothing to commit"
             exit 0

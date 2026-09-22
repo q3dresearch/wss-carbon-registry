@@ -1,5 +1,5 @@
 source_id: goldstandard.registry.projects
-status: paused                   # see notes: the engine cannot express "page until empty"
+status: active                   # endpoints are materialised by examples/refresh_endpoints.py
 cadence: monthly
 schema_id: gsproject.v1
 
@@ -30,27 +30,559 @@ notes: >-
   and the Archive photographed an empty frame 68 times. So the coverage check
   passes on measurement, not assumption.
 
-  PAUSED BECAUSE THE ENGINE CANNOT EXPRESS THE PAGINATION. The API is a bare JSON
-  array, 25 per page, with no total in the response, so the capture is "page until
-  an empty array" - 169 pages today and a different number next month. Endpoint
-  carries a fixed url, so this would need either 169 hand-listed endpoints that go
-  stale, or a paging primitive the engine does not have. Same shape of limitation
-  as eudragmdp.gmp.noncompliance's session handshake. The 2026-09-22 baseline was taken
-  by script and lives in raw/.
+  THE PAGE COUNT IS NOT KNOWABLE AHEAD. The API is a bare JSON array, 25 per page,
+  with no total in the response, so the capture is "page until an empty array" -
+  169 pages today and a different number next month. The engine takes a fixed
+  endpoint list and deliberately has not grown a paging primitive for this: the
+  registry is where what-will-be-fetched belongs, so `examples/refresh_endpoints.py`
+  materialises the list in the workflow before `wss validate`, and the diff is the
+  signal. wss-gho generates its 3,321 endpoints the same way.
+
+  THE SHRINK GATE IS ON THE REGISTER, NOT THE PAGE. The last page holds between 1
+  and 25 projects and oscillates every time the register grows, so a per-endpoint
+  max_shrink_pct fires on it by design - and a quarantined page is never archived,
+  so that gate would drop real data about once a month. refresh_endpoints.py
+  asserts the whole register has not lost more than 40% of its projects and
+  refuses to rewrite if it has; per page, must_contain still rejects an error or
+  empty body.
 
   TRAP IN THE DATA: created_at puts 1,774 of 4,207 projects in 2019 - 42% in one
   year against 321 the next. That is a platform migration timestamp, not a founding
   date. Anything keyed on created_at will read a migration as a boom.
 
+  SECOND TRAP: sustainable_development_goals is a SET SERVED IN ARBITRARY ORDER.
+  Refetching page 1 hours after the baseline, all 25 rows carried an identical set
+  of goals and 24 of the 25 came back in a different order - Goal 8 first became
+  Goal 4 first. A derived "primary SDG" taken from the first element is noise.
+  Sort the list before comparing or reporting.
+
+  THAT ALSO MEANS DEDUPE WILL NEVER FIRE HERE. Same length, same ids in the same
+  order, different bytes, on every fetch. It is not the same mechanism as
+  wss-gho's (which is object key order and a regenerated surrogate, and is fixed
+  by dedupe_canon: json - sorting object keys does not reorder a list). Fixing
+  this one needs canonicalisation that sorts nested arrays, and the engine is
+  deliberately not growing that for ~2-3 MB a month: a full copy of 169 pages
+  every month is the accepted cost here, and it is written down rather than
+  discovered later.
+
 endpoints:
   - url: "https://public-api.goldstandard.org/projects?query=&page=1"
     delay_seconds: 2
     timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=2"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=3"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=4"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=5"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=6"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=7"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=8"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=9"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=10"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=11"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=12"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=13"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=14"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=15"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=16"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=17"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=18"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=19"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=20"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=21"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=22"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=23"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=24"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=25"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=26"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=27"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=28"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=29"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=30"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=31"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=32"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=33"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=34"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=35"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=36"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=37"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=38"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=39"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=40"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=41"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=42"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=43"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=44"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=45"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=46"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=47"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=48"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=49"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=50"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=51"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=52"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=53"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=54"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=55"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=56"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=57"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=58"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=59"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=60"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=61"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=62"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=63"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=64"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=65"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=66"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=67"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=68"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=69"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=70"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=71"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=72"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=73"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=74"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=75"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=76"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=77"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=78"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=79"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=80"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=81"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=82"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=83"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=84"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=85"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=86"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=87"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=88"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=89"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=90"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=91"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=92"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=93"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=94"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=95"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=96"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=97"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=98"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=99"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=100"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=101"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=102"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=103"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=104"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=105"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=106"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=107"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=108"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=109"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=110"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=111"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=112"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=113"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=114"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=115"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=116"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=117"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=118"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=119"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=120"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=121"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=122"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=123"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=124"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=125"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=126"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=127"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=128"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=129"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=130"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=131"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=132"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=133"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=134"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=135"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=136"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=137"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=138"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=139"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=140"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=141"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=142"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=143"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=144"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=145"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=146"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=147"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=148"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=149"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=150"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=151"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=152"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=153"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=154"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=155"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=156"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=157"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=158"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=159"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=160"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=161"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=162"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=163"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=164"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=165"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=166"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=167"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=168"
+    delay_seconds: 2
+    timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=169"
+    delay_seconds: 2
+    timeout_seconds: 60
+
 
 gates:
   expect_status: 200
-  min_bytes: 5000
+  # A one-project last page is ~2.4 KB, and an empty array is 2 bytes.
+  min_bytes: 1200
   content_type_any: [json]
   must_contain: ["sustaincert_id"]
   must_not_contain: ["Access Denied", "Too Many Requests"]
-  max_shrink_pct: 40
+  # Deliberately loose: see notes. The last page legitimately shrinks from 25
+  # projects to 1 whenever the register spills into a new page. The real shrink
+  # check is on the register total, in refresh_endpoints.py.
+  max_shrink_pct: 95
