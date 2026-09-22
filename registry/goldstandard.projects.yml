@@ -1,0 +1,56 @@
+source_id: goldstandard.projects
+status: paused                   # see notes: the engine cannot express "page until empty"
+cadence: monthly
+schema_id: gsproject.v1
+
+publisher: Gold Standard Foundation
+publisher_tier: first_party
+# UNPROVEN AND DELIBERATELY FLAGGED. The evidence is an ABSENT TERMINAL STATE, not an
+# observed deletion. Across all 4,207 projects the status vocabulary is exactly three
+# values and every one is a PROGRESSION step: LISTED (1,061),
+# GOLD_STANDARD_CERTIFIED_DESIGN (867), GOLD_STANDARD_CERTIFIED_PROJECT (2,279). There is
+# no withdrawn, cancelled, expired or suspended. A project that loses certification has
+# nowhere to be marked as having lost it, so it must either freeze at its last progression
+# step or leave the register. Which of those happens needs a second capture. The baseline
+# exists as of 2026-09-22, so that question is now answerable rather than speculative.
+destroys_own_history: true
+licence: "NOT ESTABLISHED (checked 2026-09-22). robots.txt on public-api.goldstandard.org and registry.goldstandard.org are genuine 404s, so no crawl rules are stated; www.goldstandard.org permits everything but /wp-admin/, /wp-login.php, /wp-includes/, /preview/. The terms-and-conditions page addresses TRADEMARKS and media captured at events, and says nothing about the project registry or API reuse. Do not assert a grant."
+personal_data: none              # project records: no named individuals in any field
+storage: git
+
+notes: >-
+  Every project in the Gold Standard carbon registry: name, status, methodology,
+  type, size, estimated annual credits, crediting period, and a SustainCert id.
+  4,207 projects over 169 pages on 2026-09-22.
+
+  NOBODY ELSE HOLDS THIS. public-api.goldstandard.org/projects has ZERO Internet
+  Archive mementos. registry.goldstandard.org/projects has 68 mementos spanning
+  2021-2026, and four sampled captures are ~2 KB client-rendered shells with 59
+  characters of visible text and not one project id in them. The UI is a JS app
+  and the Archive photographed an empty frame 68 times. So the coverage check
+  passes on measurement, not assumption.
+
+  PAUSED BECAUSE THE ENGINE CANNOT EXPRESS THE PAGINATION. The API is a bare JSON
+  array, 25 per page, with no total in the response, so the capture is "page until
+  an empty array" - 169 pages today and a different number next month. Endpoint
+  carries a fixed url, so this would need either 169 hand-listed endpoints that go
+  stale, or a paging primitive the engine does not have. Same shape of limitation
+  as eudragmdp.noncompliance's session handshake. The 2026-09-22 baseline was taken
+  by script and lives in raw/.
+
+  TRAP IN THE DATA: created_at puts 1,774 of 4,207 projects in 2019 - 42% in one
+  year against 321 the next. That is a platform migration timestamp, not a founding
+  date. Anything keyed on created_at will read a migration as a boom.
+
+endpoints:
+  - url: "https://public-api.goldstandard.org/projects?query=&page=1"
+    delay_seconds: 2
+    timeout_seconds: 60
+
+gates:
+  expect_status: 200
+  min_bytes: 5000
+  content_type_any: [json]
+  must_contain: ["sustaincert_id"]
+  must_not_contain: ["Access Denied", "Too Many Requests"]
+  max_shrink_pct: 40

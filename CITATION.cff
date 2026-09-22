@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it."
+type: dataset
+title: "Gold Standard Carbon Project Registry (wss-carbon-registry)"
+abstract: >-
+  Point-in-time captures of the Gold Standard carbon project registry: every
+  project's name, status, methodology, type, size, estimated annual credits and
+  crediting period. The status vocabulary contains only three progression steps
+  and no terminal state, so a project that loses certification has nowhere to be
+  marked as having lost it. The public API has never been archived by the
+  Internet Archive, and the registry's own web UI is a JavaScript application
+  whose 68 archived captures are empty shells, so the register as it stood on a
+  given date is not recoverable from anywhere else.
+authors:
+  - name: "q3dresearch"
+    website: "https://github.com/q3dresearch"
+# NO `license:` FIELD BY DEFAULT, ON PURPOSE. This template hard-coded
+# CC-BY-4.0 until 2026-09-22, so every scaffolded repo claimed a grant nobody
+# had checked. Add one only once you can name what the publisher grants, and
+# write the reasoning into LICENSE-DATA. Absent means unspecified.
+keywords:
+  - git-scraping
+  - open-data
+  - point-in-time-data
+  - dataset

@@ -1,0 +1,33 @@
+# Data licence — read this before reusing anything in derived/
+
+**This repository does not and cannot license the data it captures.**
+
+## What the source says
+
+`public-api.goldstandard.org` and `registry.goldstandard.org` both serve genuine
+**404s for robots.txt**, so no crawl rules are stated — an absence of rules, not a
+grant of rights. `www.goldstandard.org` permits everything except `/wp-admin/`,
+`/wp-login.php`, `/wp-includes/` and `/preview/`. No AI agents are named anywhere.
+
+Gold Standard's terms-and-conditions page addresses **trademarks** and media
+captured at events. It says nothing about the project registry or reuse of the
+API. So what Gold Standard permits for this data is **unknown to this repository**
+as of **22 September 2026**, and an unknown is not a licence.
+
+## What this repository grants
+
+| what | licence |
+| --- | --- |
+| the code — registry, parsers, workflows | MIT, see [LICENSE](LICENSE) |
+| `derived/`, `manifest/`, `raw/` | no onward licence offered; Gold Standard's terms apply |
+
+The capture adds a retrieval timestamp and a parse. Neither creates a right over
+the underlying values.
+
+## If you are reusing this
+
+1. Attribute the **Gold Standard Foundation** as the source, not this repository.
+2. Establish their terms yourself before redistributing.
+3. Treat this file as a record of what was checked on a date, not legal advice.
+
+Checked 22 September 2026.
