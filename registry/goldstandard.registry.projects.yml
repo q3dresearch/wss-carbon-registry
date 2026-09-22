@@ -1,4 +1,4 @@
-source_id: goldstandard.projects
+source_id: goldstandard.registry.projects
 status: paused                   # see notes: the engine cannot express "page until empty"
 cadence: monthly
 schema_id: gsproject.v1
@@ -35,7 +35,7 @@ notes: >-
   an empty array" - 169 pages today and a different number next month. Endpoint
   carries a fixed url, so this would need either 169 hand-listed endpoints that go
   stale, or a paging primitive the engine does not have. Same shape of limitation
-  as eudragmdp.noncompliance's session handshake. The 2026-09-22 baseline was taken
+  as eudragmdp.gmp.noncompliance's session handshake. The 2026-09-22 baseline was taken
   by script and lives in raw/.
 
   TRAP IN THE DATA: created_at puts 1,774 of 4,207 projects in 2019 - 42% in one

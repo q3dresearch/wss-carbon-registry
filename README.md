@@ -5,7 +5,7 @@ size, estimated annual credits, crediting period, SustainCert id.
 **4,207 projects captured on 2026-09-22.**
 
 **Status: paused, with one full baseline capture.** Read
-[registry/goldstandard.projects.yml](registry/goldstandard.projects.yml) first.
+[registry/goldstandard.registry.projects.yml](registry/goldstandard.registry.projects.yml) first.
 
 ## Why this exists
 
@@ -41,7 +41,7 @@ The API is a bare JSON array, 25 per page, with no total in the response. The
 capture is *page until an empty array* — 169 pages today, a different number next
 month. `Endpoint` carries a fixed `url`, so expressing this needs either 169
 hand-listed endpoints that go stale or a paging primitive the engine does not
-have. Same class of limitation as `eudragmdp.noncompliance`'s session handshake.
+have. Same class of limitation as `eudragmdp.gmp.noncompliance`'s session handshake.
 The baseline in `raw/` was taken by script.
 
 ## One trap, already paid for
