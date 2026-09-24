@@ -1,0 +1,412 @@
+{
+  "generated_at": "2026-09-24T23:05:04Z",
+  "note": "Inferred from the derived rows by `wss schema`, not hand-written. Regenerate after any derive.",
+  "sources": {
+    "goldstandard.registry.projects": {
+      "source_id": "goldstandard.registry.projects",
+      "schema_id": "gsproject.v1",
+      "cadence": "monthly",
+      "licence": "NOT ESTABLISHED (checked 2026-09-22). robots.txt on public-api.goldstandard.org and registry.goldstandard.org are genuine 404s, so no crawl rules are stated; www.goldstandard.org permits everything but /wp-admin/, /wp-login.php, /wp-includes/, /preview/. The terms-and-conditions page addresses TRADEMARKS and media captured at events, and says nothing about the project registry or API reuse. Do not assert a grant.",
+      "personal_data": "none",
+      "storage": "git",
+      "publisher": "Gold Standard Foundation",
+      "publisher_tier": "first_party",
+      "endpoints": 169
+    }
+  },
+  "observations": {
+    "rows": 82326,
+    "columns": [
+      "series_id",
+      "entity_id",
+      "observed_at",
+      "captured_at",
+      "metric",
+      "value",
+      "unit",
+      "source_id",
+      "raw_ref",
+      "parser_version"
+    ],
+    "partitions": [
+      "2026-09.csv.gz"
+    ],
+    "series": {
+      "goldstandard.registry.projects": {
+        "rows": 82326,
+        "entities": 4207,
+        "entity_id_samples": [
+          "1000",
+          "1001",
+          "1003"
+        ],
+        "metrics": [
+          "carbon_stream",
+          "country",
+          "country_code",
+          "created_at",
+          "crediting_period_end",
+          "crediting_period_start",
+          "estimated_annual_credits",
+          "listed",
+          "methodology",
+          "name",
+          "platform_id",
+          "programme_of_activities",
+          "project_developer",
+          "project_type",
+          "sdg_count",
+          "sdgs",
+          "size",
+          "standards_version",
+          "status",
+          "updated_at"
+        ]
+      }
+    },
+    "parser_versions": [
+      "1"
+    ]
+  },
+  "metrics": {
+    "carbon_stream": {
+      "rows": 4206,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4206,
+      "distinct_values": 6,
+      "empty": 0,
+      "samples": [
+        "GS CER",
+        "GS_CER",
+        "GS_VER"
+      ]
+    },
+    "country": {
+      "rows": 4207,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4207,
+      "distinct_values": 120,
+      "empty": 0,
+      "samples": [
+        "Angola",
+        "Argentina",
+        "Armenia"
+      ]
+    },
+    "country_code": {
+      "rows": 4207,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4207,
+      "distinct_values": 120,
+      "empty": 0,
+      "samples": [
+        "AE",
+        "AM",
+        "AO"
+      ]
+    },
+    "created_at": {
+      "rows": 4207,
+      "unit": "",
+      "type": "date",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4207,
+      "distinct_values": 2833,
+      "empty": 0,
+      "min": "2019-03-27T13:49:25Z",
+      "max": "2026-08-12T05:08:03Z",
+      "samples": [
+        "2019-03-27T13:49:25Z",
+        "2019-03-27T13:49:27Z",
+        "2019-03-27T13:49:28Z"
+      ]
+    },
+    "crediting_period_end": {
+      "rows": 4207,
+      "unit": "",
+      "type": "date",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4207,
+      "distinct_values": 1973,
+      "empty": 0,
+      "min": "2006-12-31",
+      "max": "2077-07-01",
+      "samples": [
+        "2006-12-31",
+        "2008-05-31",
+        "2008-10-06"
+      ]
+    },
+    "crediting_period_start": {
+      "rows": 4207,
+      "unit": "",
+      "type": "date",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4207,
+      "distinct_values": 1855,
+      "empty": 0,
+      "min": "1995-01-01",
+      "max": "2029-03-15",
+      "samples": [
+        "1995-01-01",
+        "2001-01-01",
+        "2002-10-01"
+      ]
+    },
+    "estimated_annual_credits": {
+      "rows": 4207,
+      "unit": "credits/yr",
+      "type": "number",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4207,
+      "distinct_values": 2251,
+      "empty": 0,
+      "min": "0",
+      "max": "26686332",
+      "samples": [
+        "0",
+        "1",
+        "10"
+      ]
+    },
+    "listed": {
+      "rows": 4207,
+      "unit": "count",
+      "type": "bool",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4207,
+      "distinct_values": 1,
+      "empty": 0,
+      "samples": [
+        "1"
+      ]
+    },
+    "methodology": {
+      "rows": 2416,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 2416,
+      "distinct_values": 78,
+      "empty": 0,
+      "samples": [
+        "ACM0001 Flaring or use of landfill gas",
+        "ACM0002 Grid-connected electricity generation from renewable sources",
+        "ACM0006 Electricity and heat generation from biomass residues"
+      ]
+    },
+    "name": {
+      "rows": 4207,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4207,
+      "distinct_values": 4189,
+      "empty": 0,
+      "samples": [
+        " 10 MW Solar Photovoltaic Power Plant in Rajkot, Gujarat (India)",
+        " 13.3 MW grid connected bundled wind electricity generation project at Rajasthan and Karnataka, India",
+        " 9.6 MW Wind Energy Project at Jamvadi & Navagam & Kalavad, Jamnagar, Gujarat, India of Rohit Surfactants Pvt. Ltd."
+      ]
+    },
+    "platform_id": {
+      "rows": 4207,
+      "unit": "",
+      "type": "number",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4207,
+      "distinct_values": 4207,
+      "empty": 0,
+      "min": "1",
+      "max": "5744",
+      "samples": [
+        "1",
+        "10",
+        "100"
+      ]
+    },
+    "programme_of_activities": {
+      "rows": 4187,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4187,
+      "distinct_values": 4,
+      "empty": 0,
+      "samples": [
+        "No POA",
+        "POA",
+        "Standalone"
+      ]
+    },
+    "project_developer": {
+      "rows": 4207,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4207,
+      "distinct_values": 761,
+      "empty": 0,
+      "samples": [
+        "3M Enerji ve Elektrik Uretim A.S.",
+        "4Life Solutions ApS",
+        "ABK Enerji Elektrik retim A._."
+      ]
+    },
+    "project_type": {
+      "rows": 4207,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4207,
+      "distinct_values": 20,
+      "empty": 0,
+      "samples": [
+        "A/R",
+        "Biogas - Cogeneration",
+        "Biogas - Electricity"
+      ]
+    },
+    "sdg_count": {
+      "rows": 4206,
+      "unit": "count",
+      "type": "number",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4206,
+      "distinct_values": 13,
+      "empty": 0,
+      "min": "1",
+      "max": "17",
+      "samples": [
+        "1",
+        "10",
+        "11"
+      ]
+    },
+    "sdgs": {
+      "rows": 4206,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4206,
+      "distinct_values": 388,
+      "empty": 0,
+      "samples": [
+        "Goal 10: Reduced Inequalities; Goal 11: Sustainable Cities and Communities; Goal 12: Responsible Production and Consumption; Goal 13: Climate Action",
+        "Goal 10: Reduced Inequalities; Goal 11: Sustainable Cities and Communities; Goal 12: Responsible Production and Consumption; Goal 13: Climate Action; Goal 14: Life Below Water; Goal 15: Life On Land; Goal 16: Peace, Justice and Strong Institutions; Goal 17: Partnerships for the Goals; Goal 1: No Poverty; Goal 2: Zero Hunger; Goal 3: Good Health and Well-Being; Goal 4: Quality Education; Goal 5: Gender Equality; Goal 6: Clean Water and Sanitation; Goal 7: Affordable and Clean Energy; Goal 8: Decent Work and Economic Growth; Goal 9: Industry, Innovation and Infrastructure",
+        "Goal 10: Reduced Inequalities; Goal 11: Sustainable Cities and Communities; Goal 12: Responsible Production and Consumption; Goal 13: Climate Action; Goal 17: Partnerships for the Goals; Goal 1: No Poverty; Goal 2: Zero Hunger; Goal 3: Good Health and Well-Being; Goal 4: Quality Education; Goal 5: Gender Equality; Goal 6: Clean Water and Sanitation; Goal 7: Affordable and Clean Energy; Goal 8: Decent Work and Economic Growth; Goal 9: Industry, Innovation and Infrastructure"
+      ]
+    },
+    "size": {
+      "rows": 4207,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4207,
+      "distinct_values": 6,
+      "empty": 0,
+      "samples": [
+        "Large Scale",
+        "Large scale",
+        "Micro Scale"
+      ]
+    },
+    "standards_version": {
+      "rows": 4207,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4207,
+      "distinct_values": 11,
+      "empty": 0,
+      "samples": [
+        "1.0",
+        "2.0",
+        "2.1"
+      ]
+    },
+    "status": {
+      "rows": 4207,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4207,
+      "distinct_values": 3,
+      "empty": 0,
+      "samples": [
+        "GOLD_STANDARD_CERTIFIED_DESIGN",
+        "GOLD_STANDARD_CERTIFIED_PROJECT",
+        "LISTED"
+      ]
+    },
+    "updated_at": {
+      "rows": 4207,
+      "unit": "",
+      "type": "date",
+      "series": [
+        "goldstandard.registry.projects"
+      ],
+      "entities": 4207,
+      "distinct_values": 3463,
+      "empty": 0,
+      "min": "2020-05-07T18:17:52Z",
+      "max": "2026-09-22T15:44:13Z",
+      "samples": [
+        "2020-05-07T18:17:52Z",
+        "2020-05-07T18:17:54Z",
+        "2020-05-07T18:17:55Z"
+      ]
+    }
+  },
+  "raw": {
+    "files": 338,
+    "bytes_on_disk": 10668610,
+    "capture_dates": 1,
+    "first_capture": "2026-09-22T16:45:37Z",
+    "last_capture": "2026-09-22T16:52:50Z"
+  }
+}

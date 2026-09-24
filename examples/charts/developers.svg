@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="776" viewBox="0 0 880 776" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'><rect width="880" height="776" fill="#fcfcfb"/>
+<text x="28.0" y="40.0" font-size="19" fill="#0b0b0b" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">24 of these 99 developers have never certified anything.</text>
+<text x="28.0" y="60.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">One developer per mark, 99 with five or more projects. Age across, share of the portfolio certified up, portfolio size as area.</text>
+<text x="28.0" y="88.0" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">FOR</text>
+<text x="28.0" y="103.0" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">A buyer deciding how much weight to put on</text>
+<text x="28.0" y="116.5" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">the developer rather than the project</text>
+<text x="302.7" y="88.0" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">DECIDE</text>
+<text x="302.7" y="103.0" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">Whether to treat two projects of the same</text>
+<text x="302.7" y="116.5" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">kind and vintage as interchangeable</text>
+<text x="577.3" y="88.0" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">WRONG IF</text>
+<text x="577.3" y="103.0" font-size="11.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">The marks form a tight band at each age —</text>
+<text x="577.3" y="116.5" font-size="11.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">then the developer carries no information</text>
+<text x="577.3" y="130.0" font-size="11.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">that age does not already give</text>
+<line x1="28" y1="139.5" x2="852" y2="139.5" stroke="#e3e2db"/>
+<line x1="76" y1="511.5" x2="648" y2="511.5" stroke="#f0efe9"/>
+<text x="66.0" y="515.0" font-size="10" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">0</text>
+<line x1="76" y1="445.5" x2="648" y2="445.5" stroke="#f0efe9"/>
+<text x="66.0" y="449.0" font-size="10" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">20</text>
+<line x1="76" y1="379.5" x2="648" y2="379.5" stroke="#f0efe9"/>
+<text x="66.0" y="383.0" font-size="10" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">40</text>
+<line x1="76" y1="313.5" x2="648" y2="313.5" stroke="#f0efe9"/>
+<text x="66.0" y="317.0" font-size="10" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">60</text>
+<line x1="76" y1="247.5" x2="648" y2="247.5" stroke="#f0efe9"/>
+<text x="66.0" y="251.0" font-size="10" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">80</text>
+<line x1="76" y1="181.5" x2="648" y2="181.5" stroke="#f0efe9"/>
+<text x="66.0" y="185.0" font-size="10" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">100</text>
+<line x1="76.0" y1="181.5" x2="76.0" y2="516.5" stroke="#f0efe9"/>
+<text x="76.0" y="531.5" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">0</text>
+<line x1="156.7" y1="181.5" x2="156.7" y2="516.5" stroke="#f0efe9"/>
+<text x="156.7" y="531.5" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">1</text>
+<line x1="237.3" y1="181.5" x2="237.3" y2="516.5" stroke="#f0efe9"/>
+<text x="237.3" y="531.5" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">2</text>
+<line x1="318.0" y1="181.5" x2="318.0" y2="516.5" stroke="#f0efe9"/>
+<text x="318.0" y="531.5" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">3</text>
+<line x1="398.6" y1="181.5" x2="398.6" y2="516.5" stroke="#f0efe9"/>
+<text x="398.6" y="531.5" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">4</text>
+<line x1="479.3" y1="181.5" x2="479.3" y2="516.5" stroke="#f0efe9"/>
+<text x="479.3" y="531.5" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">5</text>
+<line x1="560.0" y1="181.5" x2="560.0" y2="516.5" stroke="#f0efe9"/>
+<text x="560.0" y="531.5" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">6</text>
+<line x1="640.6" y1="181.5" x2="640.6" y2="516.5" stroke="#f0efe9"/>
+<text x="640.6" y="531.5" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">7</text>
+<line x1="76" y1="181.5" x2="76" y2="511.5" stroke="#e3e2db"/>
+<line x1="76" y1="511.5" x2="648" y2="511.5" stroke="#e3e2db"/>
+<text x="76.0" y="169.5" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">% OF THE DEVELOPER'S PORTFOLIO CERTIFIED</text>
+<text x="648.0" y="547.5" font-size="8.5" fill="#8a8880" text-anchor="end" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">MEDIAN AGE OF THEIR PROJECTS, YEARS</text>
+<circle cx="528.5" cy="388.0" r="17.0" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="229.3" cy="278.6" r="14.6" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="327.7" cy="240.4" r="14.3" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="392.2" cy="310.8" r="13.6" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="386.5" cy="186.2" r="12.1" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="531.7" cy="343.4" r="11.1" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="287.3" cy="425.7" r="10.9" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="355.1" cy="366.3" r="10.9" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="422.8" cy="267.6" r="10.6" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="384.1" cy="401.5" r="10.1" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="349.4" cy="199.8" r="9.8" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="200.2" cy="361.5" r="9.6" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="499.5" cy="241.5" r="9.6" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="368.0" cy="191.8" r="9.5" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="232.5" cy="394.4" r="9.4" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="218.0" cy="426.3" r="9.4" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="518.0" cy="269.5" r="9.3" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="213.1" cy="511.5" r="9.1" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="368.8" cy="435.3" r="9.0" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="485.0" cy="207.9" r="8.9" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="176.0" cy="470.2" r="8.8" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="254.3" cy="382.4" r="8.7" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="363.2" cy="320.5" r="8.2" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="339.0" cy="278.6" r="8.0" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="228.4" cy="429.0" r="7.9" fill="#c08a3e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="488.2" cy="367.1" r="7.9" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="466.4" cy="325.9" r="7.9" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="266.4" cy="243.4" r="7.9" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="213.9" cy="445.5" r="7.8" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="336.5" cy="269.5" r="7.8" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="254.3" cy="370.1" r="7.6" fill="#c08a3e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="364.8" cy="511.5" r="7.6" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="186.5" cy="511.5" r="7.5" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="230.9" cy="511.5" r="7.5" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="273.6" cy="435.3" r="7.5" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="358.3" cy="308.4" r="7.5" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="209.1" cy="456.5" r="7.4" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="385.7" cy="236.5" r="7.4" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="147.8" cy="481.5" r="7.2" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="339.0" cy="331.5" r="7.2" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="241.4" cy="481.5" r="7.2" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="353.5" cy="391.5" r="7.2" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="522.9" cy="211.5" r="7.2" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="229.3" cy="412.5" r="7.1" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="288.9" cy="379.5" r="7.1" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="327.7" cy="346.5" r="7.1" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="191.3" cy="511.5" r="6.9" fill="#c08a3e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="228.4" cy="474.8" r="6.9" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="205.1" cy="511.5" r="6.9" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="480.9" cy="291.5" r="6.9" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="248.6" cy="438.2" r="6.9" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="225.2" cy="511.5" r="6.7" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="366.4" cy="387.8" r="6.7" fill="#c08a3e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="537.4" cy="264.0" r="6.7" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="371.2" cy="387.8" r="6.7" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="500.3" cy="511.5" r="6.7" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="442.2" cy="222.8" r="6.7" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="611.6" cy="264.0" r="6.7" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="615.6" cy="181.5" r="6.7" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="147.0" cy="417.2" r="6.6" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="173.6" cy="511.5" r="6.6" fill="#c08a3e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="239.7" cy="370.1" r="6.6" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="321.2" cy="322.9" r="6.6" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="308.3" cy="464.3" r="6.6" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="585.8" cy="275.8" r="6.6" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="306.7" cy="401.5" r="6.4" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="169.6" cy="511.5" r="6.4" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="193.8" cy="511.5" r="6.4" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="212.3" cy="511.5" r="6.4" fill="#c08a3e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="276.0" cy="511.5" r="6.4" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="343.0" cy="456.5" r="6.4" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="201.8" cy="511.5" r="6.4" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="372.0" cy="456.5" r="6.4" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="314.0" cy="291.5" r="6.4" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="517.2" cy="291.5" r="6.4" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="346.2" cy="236.5" r="6.4" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="610.0" cy="236.5" r="6.4" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="99.4" cy="445.5" r="6.2" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="100.2" cy="511.5" r="6.2" fill="#c08a3e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="113.9" cy="511.5" r="6.2" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="126.0" cy="511.5" r="6.2" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="126.8" cy="511.5" r="6.2" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="183.3" cy="511.5" r="6.2" fill="#c08a3e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="236.5" cy="445.5" r="6.2" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="321.2" cy="247.5" r="6.2" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="287.3" cy="379.5" r="6.2" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="344.6" cy="511.5" r="6.2" fill="#c08a3e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="224.4" cy="445.5" r="6.2" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="357.5" cy="181.5" r="6.2" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="352.7" cy="313.5" r="6.2" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="484.1" cy="445.5" r="6.2" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="548.7" cy="511.5" r="6.2" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="413.2" cy="181.5" r="6.2" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="545.4" cy="181.5" r="6.2" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="475.3" cy="247.5" r="6.2" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="480.9" cy="511.5" r="6.2" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="572.1" cy="181.5" r="6.2" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="598.7" cy="511.5" r="6.2" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="610.0" cy="511.5" r="6.2" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<text x="674.0" y="183.5" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">DOMINANT PROJECT KIND</text>
+<circle cx="681.0" cy="205.5" r="7" fill="#2f6f5e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<text x="694.0" y="209.5" font-size="9.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">cookstoves &amp;</text>
+<text x="694.0" y="220.5" font-size="9.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">domestic efficiency</text>
+<circle cx="681.0" cy="239.5" r="7" fill="#c08a3e" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<text x="694.0" y="243.5" font-size="9.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">afforestation /</text>
+<text x="694.0" y="254.5" font-size="9.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">reforestation</text>
+<circle cx="681.0" cy="273.5" r="7" fill="#3f3f8f" fill-opacity="0.55" stroke="#fcfcfb" stroke-width="2"/>
+<text x="694.0" y="277.5" font-size="9.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">everything else</text>
+<text x="674.0" y="323.5" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">PORTFOLIO SIZE</text>
+<circle cx="692.0" cy="349.5" r="6.2" fill="none" stroke="#8a8880" stroke-width="1.2"/>
+<text x="716.0" y="353.5" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="9.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">5 projects</text>
+<text x="716.0" y="353.5" fill="#8a8880" font-size="9.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">5 projects</text>
+<circle cx="692.0" cy="379.5" r="10.1" fill="none" stroke="#8a8880" stroke-width="1.2"/>
+<text x="716.0" y="383.5" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="9.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">40 projects</text>
+<text x="716.0" y="383.5" fill="#8a8880" font-size="9.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">40 projects</text>
+<circle cx="692.0" cy="409.5" r="17.0" fill="none" stroke="#8a8880" stroke-width="1.2"/>
+<text x="716.0" y="413.5" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="9.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">179 projects</text>
+<text x="716.0" y="413.5" fill="#8a8880" font-size="9.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">179 projects</text>
+<line x1="76" y1="511.5" x2="648" y2="511.5" stroke="#c08a3e" stroke-width="1.4" stroke-dasharray="5 4" opacity="0.8"/>
+<text x="84.0" y="501.5" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">24 developers sit on this line</text>
+<text x="84.0" y="501.5" fill="#c08a3e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">24 developers sit on this line</text>
+<text x="28.0" y="567.5" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="12.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">At every age, the spread runs the full height of the chart.</text>
+<text x="28.0" y="567.5" fill="#0b0b0b" font-size="12.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">At every age, the spread runs the full height of the chart.</text>
+<text x="28.0" y="586.5" font-size="10.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">That vertical spread is what the screen is reading. It is not the project kind — the colours are mixed at every height — and</text>
+<text x="28.0" y="599.5" font-size="10.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">it is not portfolio size, which correlates with the certification rate at only r=+0.26. Median project AGE is the real</text>
+<text x="28.0" y="612.5" font-size="10.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">confound at r=+0.54, which is why it is on the horizontal axis and why every score in this repo is matched on it. What is left</text>
+<text x="28.0" y="625.5" font-size="10.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">after age is the developer, and it is worth more than the project type and the age put together. Estimated annual credits are</text>
+<text x="28.0" y="638.5" font-size="10.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">drawn nowhere here: against the certification rate they sit at r=-0.02.</text>
+<line x1="28" y1="681.5" x2="852" y2="681.5" stroke="#e3e2db"/>
+<text x="28.0" y="697.5" font-size="10" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">Gold Standard registry, captured 2026-09-22; developers with at least five projects listed on or after 2020. Unlike the screening</text>
+<text x="28.0" y="710.5" font-size="10" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">plate, the rates here are PLAIN PORTFOLIO RATES and include the developer's own projects — this plate describes the spread that</text>
+<text x="28.0" y="723.5" font-size="10" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">exists, it does not score anything, and nothing downstream reads it. The leave-one-out scores are built in certification_model.py and</text>
+<text x="28.0" y="736.5" font-size="10" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">used only there. A developer at exactly 0% or exactly 100% with five projects is a small sample, which is why the mark carries the</text>
+<text x="28.0" y="749.5" font-size="10" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">portfolio size and why 24 on the floor is reported as a count rather than a rate.</text>
+</svg>
