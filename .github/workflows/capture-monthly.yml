@@ -30,7 +30,7 @@ env:
   # reports success.
   CADENCE: monthly
   SHARDS: "20" # matrix cap is 256 jobs/run — aim for ~20 jobs of ~50 sources
-  ENGINE_SPEC: "wss[object] @ git+https://github.com/${{ github.repository_owner }}/wss-engine.git@v0.6.54"
+  ENGINE_SPEC: "wss[object] @ git+https://github.com/${{ github.repository_owner }}/wss-engine.git@v0.6.58"
 
 jobs:
   plan:
