@@ -21,7 +21,7 @@ storage: git
 notes: >-
   Every project in the Gold Standard carbon registry: name, status, methodology,
   type, size, estimated annual credits, crediting period, and a SustainCert id.
-  4,207 projects over 169 pages on 2026-09-22.
+  4,228 projects over 170 pages on 2026-10-09.
 
   NOBODY ELSE HOLDS THIS, AND HERE IS THE EXACT NUMBER. The list endpoint
   public-api.goldstandard.org/projects has ZERO Internet Archive mementos.
@@ -589,6 +589,10 @@ endpoints:
   - url: "https://public-api.goldstandard.org/projects?query=&page=169"
     delay_seconds: 2
     timeout_seconds: 60
+  - url: "https://public-api.goldstandard.org/projects?query=&page=170"
+    delay_seconds: 2
+    timeout_seconds: 60
+
 
 
 gates:
